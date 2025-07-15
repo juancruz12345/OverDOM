@@ -1,0 +1,25 @@
+
+  .popup-container {
+  width: auto; /* Ancho según contenido */
+  padding: 1rem;
+  text-align: center;
+  background-color: #f5f5f5;
+  display: inline-block; /* Para que el ancho se ajuste al contenido */
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 0;
+  white-space: nowrap; /* Evita que el texto del botón se parta en varias líneas */
+}
+
+button:hover {
+  background-color: #3367d6;
+}
