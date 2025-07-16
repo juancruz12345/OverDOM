@@ -4,6 +4,7 @@ import SEOOverlay from '../components/SEOOverlay';
 export function toggleSEOOverlay() {
   const existing = document.getElementById('seo-overlay-container');
   if (existing) {
+     window.__SEOOVERLAY_ROOT__?.unmount();
     existing.remove();
     return;
   }
@@ -13,7 +14,7 @@ export function toggleSEOOverlay() {
   container.style.position = 'fixed';
   container.style.top = '0';
   container.style.left = '0';
-  container.style.zIndex = '2147483647';
+  container.style.zIndex = '3000';
 
   const shadow = container.attachShadow({ mode: 'open' });
   const mount = document.createElement('div');
@@ -22,6 +23,10 @@ export function toggleSEOOverlay() {
 
   const root = createRoot(mount);
   root.render(<SEOOverlay />);
+
+  window.__SEOOVERLAY_ROOT__ = root
+  
+
 }
 
 

@@ -1,8 +1,6 @@
-import React from 'react';
+
 import { createRoot } from 'react-dom/client';
 import Toolbar from '../components/Toolbar';
-import { removeBreakpointsPanel } from './breakpointApp';
-
 
 
 
@@ -28,21 +26,24 @@ export function createToolbar() {
   root.render(<Toolbar/>);
 }
 
+
 function removePanel() {
-
-let root;
-  
-const existing = document.getElementById('dom-inspector-container');
-  if (existing) {
-    root?.unmount();
-    existing.remove();
-    return;
+  const domContainer = document.getElementById('dom-inspector-container');
+  if (domContainer) {
+    window.__DOMINSPECTOR_ROOT__?.unmount();
+    domContainer.remove();
   }
-  removeBreakpointsPanel()
 
-  /*const panel = document.getElementById('toolbar-container')
-  if (panel) panel.remove()*/
-  setActive(false)
+  const breakpointsContainer = document.getElementById('breakpoints-panel-wrapper');
+  if (breakpointsContainer) {
+    window.__BREAKPOINTS_ROOT__?.unmount();
+    breakpointsContainer.remove();
+  }
+
+  const toolbar = document.getElementById('toolbar-container');
+  if (toolbar) {
+    toolbar.remove();
+  }
 }
 
 

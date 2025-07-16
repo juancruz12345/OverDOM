@@ -143,7 +143,7 @@ export default function DOMInspector() {
         padding: '1em'
       }}
     >
-      <h3 style={{ fontFamily: 'sans-serif' }}>🧠 DOM Inspector</h3>
+      <h3 style={{ fontFamily: 'sans-serif' }}>DOM Inspector</h3>
 
       <div style={{ display: 'flex', gap: '0.5em', marginBottom: '1em', justifyContent:'flex-end' }}>
       
@@ -197,6 +197,10 @@ export default function DOMInspector() {
           zIndex: 10000
         }}>
           <h4 style={{ fontFamily: 'sans-serif', marginTop: 0 }}>🎨 Estilos Computados</h4>
+            <div style={{ display: 'flex', gap: '0.5em', marginTop: '1em', justifyContent:'flex-end' }}>
+            <ButtonDOM icon={<Palette></Palette>} label={'Copiar estilos'} fn={copyComputedStyles}></ButtonDOM>
+            <ButtonDOM icon={'X'} label={'Cerrar'} fn={() => setShowStyles(false)}></ButtonDOM>
+          </div>
           <input
             type="text"
             placeholder="Buscar propiedad..."
@@ -212,10 +216,7 @@ export default function DOMInspector() {
             }}
           />
           <pre style={{ whiteSpace: 'pre-wrap' }}>{filteredStyles}</pre>
-          <div style={{ display: 'flex', gap: '0.5em', marginTop: '1em' }}>
-            <button onClick={copyComputedStyles}><Palette></Palette> Copiar estilos</button>
-            <button onClick={() => setShowStyles(false)}>Cerrar</button>
-          </div>
+            
         </div>
       )}
     </div>

@@ -1,9 +1,12 @@
 import { createRoot } from 'react-dom/client';
 import DOMInspector from '../components/DOMInspector';
 
-let root;
+
 
 export function toggleDOMInspector() {
+
+  
+
 
   const externalHTMLBtn = document.getElementById('external-html-btn')
   if(externalHTMLBtn)externalHTMLBtn.remove()
@@ -12,7 +15,7 @@ export function toggleDOMInspector() {
 
   const existing = document.getElementById('dom-inspector-container');
   if (existing) {
-    root?.unmount();
+     window.__DOMINSPECTOR_ROOT__?.unmount();
     existing.remove();
     return;
   }
@@ -30,8 +33,12 @@ export function toggleDOMInspector() {
   shadow.appendChild(mount)
   document.body.appendChild(container)
 
-  root = createRoot(mount)
+  const root = createRoot(mount)
   root.render(<DOMInspector />)
+
+  window.__DOMINSPECTOR_ROOT__ = root
+ 
+
 }
 
 

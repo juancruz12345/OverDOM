@@ -8,7 +8,9 @@ export function buildDOMTree(element, counter = { value: 0 }) {
     element.id === 'seo-overlay-panel' ||
     element.id === 'breakpoints-panel' ||
     element.id === 'breakpoints-toolbar-root' ||
-    element.id === 'breakpoints-nav-root'
+    element.id === 'breakpoints-nav-root' ||
+    element.id === 'breakpoints-panel-wrapper' ||
+    element.id === 'seo-overlay-container'
   ) return null;
 
   const isTextNode = element.nodeType === 3;
@@ -112,3 +114,8 @@ export function scrollToNodeInPanel(index, nodeRefs) {
 export function resetDomIndexCounter() {
   indexCounter = 0;
 }
+
+
+
+
+
