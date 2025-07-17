@@ -4,7 +4,7 @@
   padding: 1rem;
   text-align: center;
   background-color: #f5f5f5;
-  display: inline-block; /* Para que el ancho se ajuste al contenido */
+  display: inline-block; 
   box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@ button {
   cursor: pointer;
   font-size: 14px;
   margin: 10px 0;
-  white-space: nowrap; /* Evita que el texto del botón se parta en varias líneas */
+  white-space: nowrap; 
 }
 
 button:hover {

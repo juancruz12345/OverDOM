@@ -14,8 +14,8 @@ export default function Popup() {
 
   return (
     <div className="popup-container">
-      <h2>DOM Inspector</h2>
-      <button onClick={activatePanel}>Activar OverDOM</button>
+      <h2>OverDOM</h2>
+      <button onClick={activatePanel}>Activar</button>
       
     </div>
   );

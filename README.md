@@ -1,6 +1,6 @@
-# 🛠️ DevTools Inspector Extension
+# 🛠️ OverDOM Inspector Extension
 
-DevTools Inspector es una extensión de navegador orientada a desarrolladores web que permite auditar, analizar y depurar sitios web directamente desde la interfaz visual del navegador.
+OverDOM Inspector es una extensión de navegador orientada a desarrolladores web que permite auditar, analizar y depurar sitios web directamente desde la interfaz visual del navegador.
 
 ---
 
